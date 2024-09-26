@@ -4,7 +4,7 @@
 # Contents
 | Folders | Description |
 |---------|-------------|
-|[Lab_0](/lab_0)|  |
+|[Lab_0](/lab_0)| Build the environment |
 |[Lab_1](/lab_1)| 2048 using reinforcement learning in c++ |
 
 

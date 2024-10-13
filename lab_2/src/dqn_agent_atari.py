@@ -15,6 +15,8 @@ class AtariDQNAgent(DQNBaseAgent):
 		# initialize env
 		# self.env = ???
 		#, mode = 'rgb_array'
+		
+		# this is Pacman
 		self.env = gym.make('ALE/MsPacman-v5', render_mode = 'rgb_array')
 		self.env.metadata['render_fps'] = 30  # Set to your desired FPS, e.g., 30
 		self.env = gym.wrappers.RecordVideo(self.env, 'env_video')
@@ -28,6 +30,23 @@ class AtariDQNAgent(DQNBaseAgent):
 		self.test_env = gym.wrappers.RecordVideo(self.test_env, 'test_env_video')
 		self.test_env = gym.wrappers.AtariPreprocessing(self.test_env, noop_max=30, frame_skip=1, screen_size=84, terminal_on_life_loss=False, grayscale_obs=True, grayscale_newaxis=False, scale_obs=False)
 		self.test_env = gym.wrappers.FrameStack(self.test_env, 4)
+	
+		# this is Enduro
+		'''	
+		self.env = gym.make('ALE/Enduro-v5', render_mode = 'rgb_array')
+		self.env.metadata['render_fps'] = 30  # Set to your desired FPS, e.g., 30
+		# self.env = gym.wrappers.RecordVideo(self.env, 'env_video')
+		self.env = gym.wrappers.AtariPreprocessing(self.env, noop_max=30, frame_skip=1, screen_size=84, terminal_on_life_loss=False, grayscale_obs=True, grayscale_newaxis=False, scale_obs=False)
+		self.env = gym.wrappers.FrameStack(self.env, 4)
+		### TODO ###
+		# initialize test_env
+		# self.test_env = ???
+		self.test_env = gym.make('ALE/Enduro-v5', render_mode = 'rgb_array')
+		self.test_env.metadata['render_fps'] = 30 # Set to your desired FPS, e.g., 30
+		# self.test_env = gym.wrappers.RecordVideo(self.test_env, 'test_env_video')
+		self.test_env = gym.wrappers.AtariPreprocessing(self.test_env, noop_max=30, frame_skip=1, screen_size=84, terminal_on_life_loss=False, grayscale_obs=True, grayscale_newaxis=False, scale_obs=False)
+		self.test_env = gym.wrappers.FrameStack(self.test_env, 4)
+		'''
 	
 		# initialize behavior network and target network
 		self.behavior_net = AtariNetDQN(self.env.action_space.n)

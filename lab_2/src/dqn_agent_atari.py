@@ -53,7 +53,7 @@ class AtariDQNAgent(DQNBaseAgent):
 		self.behavior_net.to(self.device)
 
 		# load model
-		# self.load_and_evaluate('log/DQN/DDQN_Enduro/model_19993117_4664.pth')
+		# self.load_and_evaluate('log/model_19993117_4664.pth')
 
 		self.target_net = AtariNetDQN(self.env.action_space.n)
 		self.target_net.to(self.device)

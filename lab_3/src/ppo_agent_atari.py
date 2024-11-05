@@ -50,7 +50,7 @@ class AtariPPOAgent(PPOBaseAgent):
         self.test_env = gym.wrappers.FrameStack(self.test_env, 4)
 
         # load model
-        # self.load_and_evaluate('lab_3_2/Code/log/ref_model/model_82659120_1350.pth')
+        # self.load_and_evaluate('/log/model_47774771_2349.pth')
 
         self.net = AtariNet(self.env.action_space.n)
         self.net.to(self.device)

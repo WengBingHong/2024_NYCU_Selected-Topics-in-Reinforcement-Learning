@@ -8,4 +8,5 @@
 |[lab_1](/lab_1)| 2048 using reinforcement learning in c++ |
 |[lab_2](/lab_2)| Solve MsPacman-v5 using DQN and DDQN in python |
 |[lab_3](/lab_3)| Solve Enduro-v5 using PPO in python |
+|[lab_4](/lab_4)| Solve CarRacing-v2 using TD3 in python |
 

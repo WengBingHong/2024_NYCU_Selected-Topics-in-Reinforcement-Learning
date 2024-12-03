@@ -4,6 +4,7 @@
 # Contents
 | Folders | Description |
 |---------|-------------|
+|[env](/env)| The environment you need except final project |
 |[lab_0](/lab_0)| Build the environment |
 |[lab_1](/lab_1)| 2048 using reinforcement learning in c++ |
 |[lab_2](/lab_2)| Solve MsPacman-v5 using DQN and DDQN in python |
